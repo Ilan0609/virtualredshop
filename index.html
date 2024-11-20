@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VXPER - Account Store</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="header">
+    <h1>Welcome to VXPER.</h1>
+    <div class="stats">
+      <div>
+        <p>0+</p>
+        <p>products sold</p>
+      </div>
+      <div>
+        <p>5 ★</p>
+        <p>reviews</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="products-section">
+    <h2>Explore Products</h2>
+    <div class="products">
+      <!-- Crunchyroll Account -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=Crunchyroll+Account" alt="Crunchyroll">
+        <h3>Crunchyroll Account</h3>
+        <p>Price: €1.00</p>
+        <button onclick="redirectToPurchase('Crunchyroll', 1.00, 20)">Buy Now</button>
+      </div>
+
+      <!-- Steam Account -->
+      <div class="product-card">
+        <img src="https://via.placeholder.com/300x200?text=Steam+Account" alt="Steam">
+        <h3>Steam Account</h3>
+        <p>Price: €2.50</p>
+        <button onclick="redirectToPurchase('Steam', 2.50, 15)">Buy Now</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function redirectToPurchase(name, price, available) {
+      const url = `purchase.html?name=${encodeURIComponent(name)}&price=${price}&available=${available}`;
+      window.location.href = url;
+    }
+  </script>
+</body>
+</html>
